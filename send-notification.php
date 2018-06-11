@@ -1,9 +1,9 @@
 <?php
-include('../vendor/autoload.php');
+include('vendor/autoload.php');
 
 // Load environment variables from .env, or environment if available
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+//$dotenv = new Dotenv\Dotenv(__DIR__);
+//$dotenv->load();
 
 // Authenticate with Twilio
 $client = new Twilio\Rest\Client(getenv('TWILIO_API_KEY'), getenv('TWILIO_API_SECRET'), getenv('TWILIO_ACCOUNT_SID'));

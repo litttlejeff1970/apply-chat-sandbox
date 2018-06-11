@@ -1,5 +1,5 @@
 <?php
-include('../vendor/autoload.php');
+include('vendor/autoload.php');
 include('./randos.php');
 
 
@@ -9,8 +9,8 @@ use Twilio\Jwt\Grants\SyncGrant;
 use Twilio\Jwt\Grants\ChatGrant;
 
 // Load environment variables from .env, or environment if available
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+//$dotenv = new Dotenv\Dotenv(__DIR__);
+//$dotenv->load();
 
 // An identifier for your app - can be anything you'd like
 $appName = 'TwilioStarterDemo';
