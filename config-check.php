@@ -1,5 +1,5 @@
 <?php
-require('/vendor/autoload.php');
+require('vendor/autoload.php');
 
 // Load environment variables from .env, or environment if available
 $dotenv = new Dotenv\Dotenv(__DIR__);
