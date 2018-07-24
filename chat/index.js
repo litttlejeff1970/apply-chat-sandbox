@@ -74,7 +74,9 @@ $(function() {
         // Initialize the Chat client
         chatClient = new Twilio.Chat.Client(data.token);
         chatClient.getSubscribedChannels().then(createOrJoinGeneralChannel);  
-		loadFrame(chatClient,generalChannel);
+		chatClient.on('channelJoined', function(channel) {
+			loadFrame(chatClient,channel);
+		});
     });
 
     function createOrJoinGeneralChannel() {
