@@ -52,8 +52,13 @@ $(function() {
 			}
 		  },
 		  visual: {
-			colorTheme: 'DarkTheme'
-		  }
+			colorTheme: 'LightTheme',
+			  messageStyle: 'Rounded',
+			  inputAreaStyle: 'Bubble'		  
+		  },
+			windowControls: {
+				visible: true
+			}
 		}
 	  };
 	  const chatFrame = Twilio.Frame.createChat(client, frameConfiguration);
