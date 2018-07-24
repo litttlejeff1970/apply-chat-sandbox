@@ -119,11 +119,11 @@ $(function() {
     }
 
     // Send a new message to the general channel
-    var $input = $('#chat-input');
-    $input.on('keydown', function(e) {
-        if (e.keyCode == 13) {
-            generalChannel.sendMessage($input.val())
-            $input.val('');
-        }
-    });
+//    var $input = $('#chat-input');
+//    $input.on('keydown', function(e) {
+//        if (e.keyCode == 13) {
+//            generalChannel.sendMessage($input.val())
+//            $input.val('');
+//        }
+//    });
 });
