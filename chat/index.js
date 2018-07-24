@@ -46,11 +46,6 @@ $(function() {
 	function loadFrame(client, channel) {
 	  const frameConfiguration = {
 		channel: {
-		  chrome: {
-			closeCallback: channelSid => {
-			  chatFrame.unloadChannelBySid(channelSid);
-			}
-		  },
 		  visual: {
 			colorTheme: 'LightTheme',
 			  messageStyle: 'Rounded',
@@ -58,7 +53,7 @@ $(function() {
 		  },
 			windowControls: {
 				visible: true,
-				closeCallback: channelSid => {
+				closeCallback: function(channelSid){
 					chatFrame.unloadChannelBySid(channelSid);
 				}
 			}
