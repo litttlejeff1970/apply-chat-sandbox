@@ -1,5 +1,6 @@
 $(function() {
-    // Get handle to the chat div 
+	
+	// Get handle to the chat div 
     var $chatWindow = $('#messages');
 
     // Our interface to the Chat service
@@ -40,7 +41,26 @@ $(function() {
     // Alert the user they have been assigned a random username
     print('Logging in...');
 
-    // Get an access token for the current user, passing a username (identity)
+	// Function to load the frame
+	
+	function loadFrame(client, channel) {
+	  const frameConfiguration = {
+		channel: {
+		  chrome: {
+			closeCallback: channelSid => {
+			  chatFrame.unloadChannelBySid(channelSid);
+			}
+		  },
+		  visual: {
+			colorTheme: 'DarkTheme'
+		  }
+		}
+	  };
+	  const chatFrame = Twilio.Frame.createChat(client, frameConfiguration);
+	  chatFrame.loadChannel('#messages', channel);
+	}
+	
+	// Get an access token for the current user, passing a username (identity)
     // and a device ID - for browser-based apps, we'll always just use the 
     // value "browser"
     $.getJSON('/token.php', {
@@ -53,7 +73,8 @@ $(function() {
 
         // Initialize the Chat client
         chatClient = new Twilio.Chat.Client(data.token);
-        chatClient.getSubscribedChannels().then(createOrJoinGeneralChannel);        
+        chatClient.getSubscribedChannels().then(createOrJoinGeneralChannel);  
+		loadFrame(chatClient,generalChannel);
     });
 
     function createOrJoinGeneralChannel() {
