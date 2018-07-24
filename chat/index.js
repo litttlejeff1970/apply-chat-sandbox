@@ -113,9 +113,9 @@ $(function() {
         });
 
         // Listen for new messages sent to the channel
-        generalChannel.on('messageAdded', function(message) {
-            printMessage(message.author, message.body);
-        });
+//        generalChannel.on('messageAdded', function(message) {
+//            printMessage(message.author, message.body);
+//        });
     }
 
     // Send a new message to the general channel
