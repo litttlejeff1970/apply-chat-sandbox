@@ -57,7 +57,10 @@ $(function() {
 			  inputAreaStyle: 'Bubble'		  
 		  },
 			windowControls: {
-				visible: true
+				visible: true,
+				closeCallback: channelSid => {
+					chatFrame.unloadChannelBySid(channelSid);
+				}
 			}
 		}
 	  };
