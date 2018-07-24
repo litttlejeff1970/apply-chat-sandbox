@@ -88,7 +88,8 @@ $(function() {
             generalChannel = channel;
             console.log('Found general channel:');
             console.log(generalChannel);
-            setupChannel();
+            //setupChannel();
+			generalChannel.join();
         }).catch(function() {
             // If it doesn't exist, let's create it
             console.log('Creating general channel');
@@ -99,7 +100,8 @@ $(function() {
                 console.log('Created general channel:');
                 console.log(channel);
                 generalChannel = channel;
-                setupChannel();
+                //setupChannel();
+				generalChannel.join();
             });
         });
     }
