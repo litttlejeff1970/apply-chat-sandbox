@@ -65,6 +65,10 @@ $(function () {
 						"header": {
 							"background": "#2B225B",
 							"color": "#FFFFFF"
+						},
+						"sendButton": {
+							"background": "#24bba2",
+							"color": "#ffffff"
 						}
 					}
 				},
