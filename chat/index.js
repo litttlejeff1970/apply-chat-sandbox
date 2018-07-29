@@ -112,7 +112,9 @@ $(function () {
 			console.log('Found general channel:');
 			console.log(generalChannel);
 			//setupChannel();
-			generalChannel.join();
+			generalChannel.join().then(function(channel) {
+				channel.updateFriendlyName('Barksy Chat');
+			});
 		}).catch(function () {
 			// If it doesn't exist, let's create it
 			console.log('Creating general channel');
