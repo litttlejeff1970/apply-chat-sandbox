@@ -32,13 +32,13 @@
 		self.htmlPopover = '<div id="messages"></div>';
 
 		self.startChat = function () {
-			$http.get('/token.php').then(function (data) {
+			$http.get('/token.php').then(function (response) {
 				// Alert the user they have been assigned a random username
-				username = data.identity;
+				username = response.data.identity;
 				//				print('You have been assigned a random username of: ' + '<span class="me">' + username + '</span>', true);
 
 				// Initialize the Chat client
-				chatClient = new Twilio.Chat.Client(data.token);
+				chatClient = new Twilio.Chat.Client(response.data.token);
 				chatClient.getSubscribedChannels().then(createOrJoinGeneralChannel);
 				chatClient.on('channelJoined', function (channel) {
 					loadFrame(chatClient, channel);
