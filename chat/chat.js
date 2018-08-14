@@ -29,7 +29,7 @@
 		var username;
 
 		// var templateUrl = "chat/webchat.html";
-		self.htmlPopover = $sce.trustAsHtml('<div id="messages">Something in the popover window.</div>');
+		self.htmlPopover = $sce.trustAsHtml('<div id="messages">Loading chat frame...please wait...</div>');
 
 		self.startChat = function () {
 			$http.get('/token.php').then(function (response) {
