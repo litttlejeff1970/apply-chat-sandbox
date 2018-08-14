@@ -3,7 +3,7 @@
 
 	var app = angular.module('webchat', [
 		// Angular modules 
-		'ui.bootstrap.popover'
+		'ui.bootstrap'
 
 		// Custom modules 
 
