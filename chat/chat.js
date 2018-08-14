@@ -12,9 +12,9 @@
 
 	app.controller('webchatController', webchatController);
 
-	webchatController.$inject = ['$log', '$timeout', '$http', '$q'];
+	webchatController.$inject = ['$log', '$timeout', '$http', '$q', '$sce'];
 
-	function webchatController($log, $timeout, $http, $q) {
+	function webchatController($log, $timeout, $http, $q, $sce) {
 		var self = this;
 
 		// Our interface to the Chat service
@@ -29,7 +29,7 @@
 		var username;
 
 		// var templateUrl = "chat/webchat.html";
-		self.htmlPopover = '<div id="messages"></div>';
+		self.htmlPopover = $sce.trustAsHtml('<div id="messages"></div>');
 
 		self.startChat = function () {
 			$http.get('/token.php').then(function (response) {
