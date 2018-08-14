@@ -60,7 +60,7 @@ img {
 	</div>
 <div class="outer-wrapper" ng-controller="webchatController as webchat">
     <div class="inner-wrapper">
-        <button style="background-color: rgb(50, 184, 158);" class="webchat-button"> <img src="http://canvas-sms-widget.oldspeake.io/static/media/icon.225e171e.svg" alt="Chat With Us" style="height: 28px" uib-popover-html="webchat.htmlPopover"> </button>
+        <button style="background-color: rgb(50, 184, 158);" class="webchat-button"> <img src="http://canvas-sms-widget.oldspeake.io/static/media/icon.225e171e.svg" alt="Chat With Us" style="height: 28px" uib-popover-html="webchat.htmlPopover" ng-click="webchat.startChat()"> </button>
     </div>
 </div>
 </body>
