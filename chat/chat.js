@@ -1,12 +1,7 @@
 (function () {
 	'use strict';
 
-	var app = angular.module('webchat', [
-		// Angular modules 
-		// Custom modules 
-
-		// 3rd Party Modules
-	]);
+	var app = angular.module('webchat');
 
 	app.controller('webchatController', webchatController);
 
