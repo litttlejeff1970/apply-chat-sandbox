@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var app = angular.module('webchat');
+	var app = angular.module('webchat',[]);
 
 	app.controller('webchatController', webchatController);
 
