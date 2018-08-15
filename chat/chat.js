@@ -22,6 +22,16 @@
 		// here
 		var username;
 
+		self.toggleChat = function() {
+			if (self.chatWindowActive) {
+				self.chatWindowActive = false;
+				chatFrame.unloadChannelBySid(generalChannel);
+			} else {
+				self.chatWindowActive = true;
+				self.startChat();
+			}
+		};
+		
 		self.startChat = function () {
 			self.chatWindowActive = true;
 			$http.get('/token.php').then(function (response) {
@@ -101,6 +111,7 @@
 					"windowControls": {
 						"visible": true,
 						"closeCallback": function (channelSid) {
+							self.chatWindowActive = false;
 							chatFrame.unloadChannelBySid(channelSid);
 						}
 					}
