@@ -60,7 +60,7 @@ body.io-gocanvas-widget-open .outer-wrapper {
 	justify-content: flex-end;
 	pointer-events: auto
 }
-.outer-wrapper-2 .inner-wrapper {
+.outer-wrapper_2 .inner-wrapper {
 	top: .5em;
 	left: .5em
 }
