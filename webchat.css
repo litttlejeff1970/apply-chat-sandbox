@@ -125,7 +125,8 @@ body.io-gocanvas-widget-open .outer-wrapper {
 	border-radius: 12px;
 	background: #fff;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-	font-size: 1em
+	font-size: 1em;
+	display: flex
 }
 
 @media screen and (max-height:568px) {
