@@ -3,8 +3,6 @@
 
 	var app = angular.module('webchat', [
 		// Angular modules 
-		'ui.bootstrap'
-
 		// Custom modules 
 
 		// 3rd Party Modules
@@ -16,6 +14,7 @@
 
 	function webchatController($log, $timeout, $http, $q, $sce) {
 		var self = this;
+		self.chatWindowActive = false;
 
 		// Our interface to the Chat service
 		var chatClient;
@@ -28,10 +27,8 @@
 		// here
 		var username;
 
-		// var templateUrl = "chat/webchat.html";
-		self.htmlPopover = $sce.trustAsHtml('<div id="messages">Loading chat frame...please wait...</div>');
-
 		self.startChat = function () {
+			self.chatWindowActive = true;
 			$http.get('/token.php').then(function (response) {
 				// Alert the user they have been assigned a random username
 				username = response.data.identity;

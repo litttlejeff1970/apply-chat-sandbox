@@ -60,7 +60,7 @@ body.io-gocanvas-widget-open .outer-wrapper {
 	justify-content: flex-end;
 	pointer-events: auto
 }
-._3FA4RLIYnrSbCGUy_xzWDz .inner-wrapper {
+.outer-wrapper-2 .inner-wrapper {
 	top: .5em;
 	left: .5em
 }
@@ -118,7 +118,7 @@ body.io-gocanvas-widget-open .outer-wrapper {
 ._dT-rEUiegnP3prdsezd {
 	font-size: large
 }
-._2uAZFj1ZQ0fUhy7Xljwwtk {
+.window-outer-wrapper {
 	width: 315px;
 	margin: 0 20px 1em;
 	border-radius: 12px;
@@ -128,7 +128,7 @@ body.io-gocanvas-widget-open .outer-wrapper {
 }
 
 @media screen and (max-height:568px) {
-._2uAZFj1ZQ0fUhy7Xljwwtk {
+.window-outer-wrapper {
 	width: auto;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -141,11 +141,11 @@ body.io-gocanvas-widget-open .outer-wrapper {
 }
 
 @media screen and (max-height:800px) and (max-width:768px) {
-._2uAZFj1ZQ0fUhy7Xljwwtk {
+.window-outer-wrapper {
 	width: calc(100% - 3em)
 }
 }
-._2uAZFj1ZQ0fUhy7Xljwwtk header {
+.window-outer-wrapper header {
 	padding: 12px;
 	background: #2a235b;
 	color: #fff;
