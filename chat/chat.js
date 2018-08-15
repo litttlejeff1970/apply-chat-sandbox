@@ -112,7 +112,7 @@
 						}
 					},
 					"windowControls": {
-						"visible": true,
+						"visible": false,
 						"closeCallback": function (channelSid) {
 							self.chatWindowActive = false;
 							chatFrame.unloadChannelBySid(channelSid);
