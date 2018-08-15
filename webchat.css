@@ -121,7 +121,6 @@ body.io-gocanvas-widget-open .outer-wrapper {
 .window-outer-wrapper {
 	width: 360px;
 	height: 768px;
-	overflow: scroll;
 	margin: 0 20px 1em;
 	border-radius: 12px;
 	background: #fff;
