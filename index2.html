@@ -38,7 +38,7 @@ img {
 <script src="https://media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.js"></script>
 <script src="https://media.twiliocdn.com/sdk/js/chat/v1.0/twilio-chat.js"></script>
 <script src="https://media.twiliocdn.com/sdk/js/frame-chat/v0.3/twilio-frame-chat.bundle.min.js"></script>
-<!--<script src="Scripts/bootstrap.min.js"></script>-->
+<script src="Scripts/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="Scripts/angular.min.js"></script>
 <script src="chat/chat.js"></script>
@@ -54,7 +54,7 @@ img {
     <button uib-popover="I have some text to show you." type="button" class="btn btn-default">Click Me</button>
 </div>
 <div ng-controller="webchatController as webchat">
-    <div class="outer-wrapper" ng-class="{outer-wrapper-2:webchat.chatWindowActive}">
+    <div class="outer-wrapper" ng-class="{outer-wrapper-2: webchat.chatWindowActive}">
         <div class="inner-wrapper"> <span>
             <div class="window-outer-wrapper" ng-show="webchat.chatWindowActive">
                 <div id="messages"></div>
