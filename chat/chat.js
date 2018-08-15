@@ -21,6 +21,9 @@
 		// The server will assign the client a random username - store that value
 		// here
 		var username;
+		
+		// A handle to the chat frame
+		var chatFrame;
 
 		self.toggleChat = function() {
 			if (self.chatWindowActive) {
@@ -118,7 +121,7 @@
 				}
 			};
 			
-			var chatFrame = Twilio.Frame.createChat(client, frameConfiguration);
+			chatFrame = Twilio.Frame.createChat(client, frameConfiguration);
 			chatFrame.loadChannel('#messages', channel);
 		};
 	}
