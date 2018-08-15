@@ -28,7 +28,7 @@
 		self.toggleChat = function() {
 			if (self.chatWindowActive) {
 				self.chatWindowActive = false;
-				chatFrame.unloadChannelBySid(generalChannel);
+				chatFrame.unloadChannelByContainer('messages');
 			} else {
 				self.chatWindowActive = true;
 				self.startChat();
