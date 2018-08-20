@@ -1,7 +1,13 @@
 <?php
 include('vendor/autoload.php');
 include('./randos.php');
-
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']) && $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'] == 'POST') {
+        header('Access-Control-Allow-Origin: https://s3.us-east-2.amazonaws.com');
+        header('Access-Control-Allow-Headers: X-Requested-With, content-type, access-control-allow-origin, access-control-allow-methods, access-control-allow-headers');
+    }
+    exit;
+}
 
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;
@@ -50,6 +56,7 @@ if (!empty(getenv('TWILIO_CHAT_SERVICE_SID'))) {
 
 // return serialized token and the user's randomly generated ID
 header('Content-type:application/json;charset=utf-8');
+header('Access-Control-Allow-Origin: https://s3.us-east-2.amazonaws.com');
 echo json_encode(array(
     'identity' => $identity,
     'token' => $token->toJWT(),
